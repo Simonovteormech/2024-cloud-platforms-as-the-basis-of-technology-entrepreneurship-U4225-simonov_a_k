@@ -18,26 +18,29 @@ Date of finished: 22.10.2024\
 
 1. Получение доступа к Google Cloud: 
     - Заполнил Google форму, приложив свою Gmail почту, для получения доступа к Google Cloud.
-	![1](/lab1/1.jpg)
+	![image](https://github.com/user-attachments/assets/3a1f6606-4e28-4707-9123-2649f94562d4)
 2. Создание Service Account:
     - Вошёл в вкладку IAM и создал Service Account с ролью Storage Admin.
-	![2](/lab1/2.jpg)
-	![3](/lab1/3.jpg)
+	![image](https://github.com/user-attachments/assets/f12df527-3bc8-45af-87ad-1b1679d5f705)
+        ![image](https://github.com/user-attachments/assets/530330ec-c318-4d6a-99ff-d1e552a87ce7)
+
 3. Создание Compute Engine:
     - Создал минимальный Compute Engine (виртуальную машину) с Machine type e2-micro в режиме spot.
-	![4](/lab1/4.jpg)
+	![image](https://github.com/user-attachments/assets/8d4f2873-bebb-40fe-bd01-80f5f373ac64)
+        ![image](https://github.com/user-attachments/assets/15368854-72d2-4a6e-9326-e18929b003e9)
+
 4. Копирование файлов с помощью gsutils:
     - С помощью утилиты gsutils нашёл бакет lab1-bucket-itmo и скопировал 3 файла в локальную папку на VM.
     - Используя команду `ls -lah` отобразил, что эти файлы хранятся на VM.
-	![5](/lab1/5.jpg)
-	![6](/lab1/6.jpg)
-	![7](/lab1/7.jpg)
+      ![image](https://github.com/user-attachments/assets/763c4b98-6632-4ea5-a4c5-941b36526f8c)
+      ![image](https://github.com/user-attachments/assets/ba5901bf-d9a3-4018-994e-bbaee78168be)
+      
 5. Изменение прав доступа Service Account:
     - Изменил права доступа для своего Service Account с Storage Admin на Compute Viewer.
-	![8](/lab1/8.jpg)
-	![9](/lab1/9.jpg)
+      ![image](https://github.com/user-attachments/assets/1fcb435d-533b-40a6-9c50-dac4cdfefc91)
+     ![image](https://github.com/user-attachments/assets/069a167c-1cb9-4418-9af0-3b9873f3e567)
     - Попытался повторить пункт с копированием данных.
-	![10](/lab1/10.jpg)
+
     - Результат: Копирование файлов не выполнилось. Это подтверждает, что роль Compute Viewer не предоставляет права на доступ к хранилищу данных.
 6. Удаление созданных сервисов:
     - Удалил созданные сервисы: Service Account и виртуальную машину.
