@@ -27,19 +27,20 @@ Date of finished: 22.10.2024\
 3. Создание Compute Engine:
     - Создал минимальный Compute Engine (виртуальную машину) с Machine type e2-micro в режиме spot.
 	![image](https://github.com/user-attachments/assets/8d4f2873-bebb-40fe-bd01-80f5f373ac64)
-        ![image](https://github.com/user-attachments/assets/15368854-72d2-4a6e-9326-e18929b003e9)
+        ![image](https://github.com/user-attachments/assets/1e083e49-7aac-4739-b38a-825f60e899e3)
+
 
 4. Копирование файлов с помощью gsutils:
     - С помощью утилиты gsutils нашёл бакет lab1-bucket-itmo и скопировал 3 файла в локальную папку на VM.
     - Используя команду `ls -lah` отобразил, что эти файлы хранятся на VM.
-      ![image](https://github.com/user-attachments/assets/763c4b98-6632-4ea5-a4c5-941b36526f8c)
-      ![image](https://github.com/user-attachments/assets/ba5901bf-d9a3-4018-994e-bbaee78168be)
+      ![image](https://github.com/user-attachments/assets/bd5fccd9-8dce-45ca-a60c-4ab562871779)
       
 5. Изменение прав доступа Service Account:
     - Изменил права доступа для своего Service Account с Storage Admin на Compute Viewer.
-      ![image](https://github.com/user-attachments/assets/1fcb435d-533b-40a6-9c50-dac4cdfefc91)
-     ![image](https://github.com/user-attachments/assets/069a167c-1cb9-4418-9af0-3b9873f3e567)
+     ![image](https://github.com/user-attachments/assets/b03c4bbf-269a-4040-b232-3d61f0152b0e)
+
     - Попытался повторить пункт с копированием данных.
+![image](https://github.com/user-attachments/assets/1a85f632-b750-43f2-a813-5077689bca5e)
 
     - Результат: Копирование файлов не выполнилось. Это подтверждает, что роль Compute Viewer не предоставляет права на доступ к хранилищу данных.
 6. Удаление созданных сервисов:
